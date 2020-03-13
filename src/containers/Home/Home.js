@@ -59,7 +59,7 @@ class Home extends PureComponent {
                         {this.state.gallery.items.map((key, index) => (
                             <tr key={index}>
                                 <th>
-                                    <img src={IMAGES_SERVER+'s/'+key.src} alt={key.name}/>
+                                    <img src={API_SERVER+'render/s/'+key.src+'?id='+localStorage.getItem('id')+'&token='+localStorage.getItem('token')} alt={key.name}/>
                                 </th>
                                 <th>
                                     <TextField label="Имя" value={key.name}/>
